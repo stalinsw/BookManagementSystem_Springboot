@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookWorm - Add a New Book</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add a new book</h1>
+        <form th:action="@{/book/new/added}" method="post" enctype="multipart/form-data" class="add-form form">
+            <label for="title">Title of the book:</label>
+            <input type="text" placeholder="Enter the title of the book" id="title" name="bookName" required>
+
+            <label for="author">Author:</label>
+            <input type="text" placeholder="Enter the name of the author" id="author" name="author" required>
+
+            <label for="genre">Genre:</label>
+            <input type="text" placeholder="Enter the genre of the book" id="genre" name="genre" required>
+
+            <label for="year">Year:</label>
+            <input type="number" placeholder="Enter the year the book got published" id="year" name="year" required>
+
+            <label for="imageUrl">Book Image URL:</label>
+            <input type="text" id="imageUrl" placeholder="Enter the image URL" name="imageUrl"> 
+
+            <div class="btn-add-class">
+                <button type="submit" class="btn">Save Book</button>
+                <a href="/" class="btn">Go to Home Page</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

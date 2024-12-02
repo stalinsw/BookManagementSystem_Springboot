@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Unified background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px; /* Unified width for larger content */
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading Styles */
+h3, h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+/* Form Styles */
+.add-form,
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Button Group for Forms */
+.btn-add-class,
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+/* Custom Button Styles */
+.custom-btn,
+.btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    background-color: #28a745; /* Default green button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.custom-btn:hover,
+.btn:hover {
+    background-color: #218838;
+    text-decoration: none;
+    color: white;
+}
+
+.custom-btn:not(.delete-btn):not(.cancel-btn) {
+    background-color: #007bff;
+}
+
+.custom-btn:not(.delete-btn):not(.cancel-btn):hover {
+    background-color: #0056b3;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.cancel-btn {
+    background-color: #6c757d;
+}
+
+.cancel-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Book Cards */
+.book-card-item {
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 0px 1px;
+}
+
+.book-card-item:hover {
+    transform: scale(1.1);
+}
+
+.book-card-item img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.book-card-item h4 {
+    margin-top: 10px;
+}
+
+.book-list .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Book Image */
+.book-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.book-image img {
+    max-width: 200px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Message if no books are available */
+.no-message {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h3, h1 {
+        font-size: 20px;
+    }
+
+    .custom-btn {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .book-card-item img {
+        max-width: 120px;
+    }
+
+    .book-image img {
+        max-width: 150px;
+    }
+}

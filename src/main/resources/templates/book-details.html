@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="'Book Details - ' + ${book.bookName}"></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="book-details">
+            <h3 th:text="'Details of the book - ' + ${book.bookName}"></h3>
+            <div class="book-image">
+                <img th:src="${book.imageUrl}" alt="Book Image" class="img-fluid">
+            </div>
+            <h4 th:text="${book.bookName}"></h4>
+            <p th:text="'Author: ' + ${book.author}"></p>
+            <p th:text="'Genre: ' + ${book.genre}"></p>
+            <p th:text="'Published Year: ' + ${book.year}"></p>
+            <a href="/" class="custom-btn">Back to List</a>
+        </div>
+    </div>
+</body>
+
+</html>
